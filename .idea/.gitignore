@@ -1,2 +1,4 @@
 # Default ignored files
 /workspace.xml
+/Auto/cars/migrations/
+/Auto/users/migrations/
