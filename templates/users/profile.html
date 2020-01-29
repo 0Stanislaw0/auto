@@ -1,0 +1,68 @@
+{% extends 'cars/base.html' %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+{% block main_section %}
+ <div class="form-section">
+   <h2>{% trans "Кабинет пользователя" %}</h2>
+   <div class="media text-muted pt-3">
+        <strong class="d-block text-gray-dark">{{ user.email}}</strong>
+    </div>
+          <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}" />
+    <select name="language">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% get_available_languages as LANGUAGES %}
+        {% get_language_info_list for LANGUAGES as languages %}
+        {% for language in languages %}
+            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
+                {{ language.name_local }} ({{ language.code }})
+            </option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="{% trans 'Change' %}" />
+</form>
+    <h3 class="mt-4">{% trans "Изменение данных" %}</h3>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ update_user|crispy }}
+      <button type="submit" name="btn btn-outline-warning">
+        {% trans "Изменить" %}
+      </button>
+    </form>
+
+     <b><a href="{% url 'pass-reset' %}">{% trans "Желаетe сменить пароль?" %}</a></b>
+ </div>
+<div class="form-section">
+   <h2>{% trans "Мои машины" %}</h2>
+            {% get_current_language as LANGUAGE_CODE %}
+    {% for car in cars%}
+        {% if LANGUAGE_CODE == "en"%}
+      <div class ="text">
+        <p>{% trans "Машина" %}:<b> {{ car.nameen }}</b></p>
+      </div>
+      {%else%}
+       <div class ="text">
+        <p>{% trans "Машина" %}:<b> {{ car.nameru}}</b></p>
+       </div>
+    {%endif%}
+    <p>  {% trans "Год создания" %}:
+          <b>  {{car.year_of_creation}}</b></p>
+    <hr>
+      {% endfor %}
+</div>
+
+{% endblock main_section %}
+
+  {% block content %}
+{% for post in reservations %}
+  <div class="form-section">
+    <div class ="text">
+        <p>{% trans "Машина" %}:<b>  {{post.car}}</b></p>
+    </div>
+      <p> {% trans "Начало аренды" %}:<b> {{ post.start_time|date:"d E Y в H:i:s" }}</b></p>
+      <p>{% trans "Конец аренды" %}:<b>{{post.end_time|date:"d E Y в H:i:s"}}</b></p>
+    <br><a href="{% url 'reserv_detail' post.id %}" class ="btn btn-outline-warning">Подробнее</a>
+  </div><br>
+{% endfor %}
+
+  {% endblock %}

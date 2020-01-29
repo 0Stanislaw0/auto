@@ -1,0 +1,13 @@
+{% extends 'cars/base.html' %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block main_section %}
+{% for message in messages %}
+  {{ message }}
+{% endfor %}
+    <h1>{%trans "Rent car"%}</h1>
+    <form method="POST" class="device-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">{%trans "Rent car"%}</button>
+    </form>
+{% endblock main_section %}

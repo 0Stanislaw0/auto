@@ -29,31 +29,45 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'cars.apps.CarsConfig',
     'users.apps.UsersConfig',
+
+    # third-party packages
+    'crispy_forms',
+    'phonenumber_field',
+    'rest_framework',
+    'rest_framework.authtoken',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+TEMPLATE_CONTEXT_PROCESSORS = ('django.contrib.auth.context_processors.auth', 'django.core.context_processors.debug',
+                               'django.core.context_processors.i18n',
+                               'django.core.context_processors.request', 'django.core.context_processors.static',
+                               'django.contrib.messages.context_processors.messages',
+                               )
 ROOT_URLCONF = 'Auto.urls'
 AUTH_USER_MODEL = 'users.CustomUser'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -105,7 +119,9 @@ LANGUAGES = (
     ('ru', 'Russian'),
     ('en', 'English'),
 )
-
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 TIME_ZONE = 'UTC'
 
@@ -113,9 +129,37 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False  # must be True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static/'),
+]
+# STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = '/media/'
+LOGIN_REDIRECT_URL = 'base'  # Возвращаем на главную страницу
+LOGIN_URL = 'login'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+from .email import *
+
+EMAIL_BACKEND = EMAIL_BACKEND
+EMAIL_HOST = EMAIL_HOST
+EMAIL_PORT = EMAIL_PORT
+EMAIL_HOST_USER = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD
+EMAIL_USE_TLS = EMAIL_USE_TLS
+SERVER_EMAIL = SERVER_EMAIL
+DEFAULT_FROM_EMAIL = DEFAULT_FROM_EMAIL
+
+
+
+from .DRF import *
+TOKEN_EXPIRED_AFTER_SECONDS = TOKEN_EXPIRED_AFTER_SECONDS
+REST_FRAMEWORK = REST_FRAMEWORK

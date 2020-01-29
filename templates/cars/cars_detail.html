@@ -1,0 +1,19 @@
+{% extends 'cars/base.html' %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block main_section %}
+
+  <div class="form-section">
+    <div class ="text">
+        <p>{% trans "Русское название" %}:<b>  {{object.nameru}}</b></p>
+    </div>
+      <p> {% trans "Английское название" %}:<b> {{ object.nameen }}</b></p>
+      <p>{% trans "Год создания" %}:
+          <b>{{object.year_of_creation}}</b></p>
+         <p>{% trans "Владелец" %}:
+          <b>{{object.author}}</b></p>
+        <span class="text-muted">{{object.date|date:"d E Y в H:i:s"}}</span>
+  </div><br>
+
+{% endblock main_section %}
+

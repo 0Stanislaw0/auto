@@ -1,0 +1,240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-01-03 16:03+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: cars/models.py:10 templates/cars/cars_detail.html:8
+#: templates/cars/cars_models.html:9
+msgid "Русское название"
+msgstr "Русское название"
+
+#: cars/models.py:11 templates/cars/cars_detail.html:10
+#: templates/cars/cars_models.html:11
+msgid "Английское название"
+msgstr "Английское название"
+
+#: cars/models.py:12 templates/cars/cars_detail.html:11
+#: templates/cars/cars_models.html:12
+msgid "Год создания"
+msgstr "Год создания"
+
+#: cars/models.py:15 templates/cars/cars_detail.html:13
+#: templates/cars/cars_models.html:14
+msgid "Владелец"
+msgstr "Владелец"
+
+#: cars/models.py:26
+msgid "Пользователь"
+msgstr "User"
+
+#: cars/models.py:27
+msgid "Дата аренды"
+msgstr "Дата аренды"
+
+#: cars/models.py:28
+msgid "Дата возвращения"
+msgstr "Дата возвращения"
+
+#: cars/models.py:29
+msgid "Машина"
+msgstr "Машина"
+
+#: cars/models.py:30
+msgid "Статус"
+msgstr "Статус"
+
+#: templates/cars/base.html:25
+msgid "Главная"
+msgstr "Главная"
+
+#: templates/cars/base.html:28
+msgid "Биографии"
+msgstr "Биографии"
+
+#: templates/cars/base.html:34 templates/cars/cars_add.html:10
+#, fuzzy
+#| msgid "Добавить статью"
+msgid "Добавить машину"
+msgstr "Добавить машину"
+
+#: templates/cars/base.html:35
+msgid "Профиль"
+msgstr "Профиль"
+
+#: templates/cars/base.html:36
+msgid "Выйти"
+msgstr "Выйти"
+
+#: templates/cars/base.html:38
+msgid "Регистрация"
+msgstr "Регистрация"
+
+#: templates/cars/base.html:39 templates/users/login.html:10
+msgid "Войти"
+msgstr "Войти"
+
+#: templates/cars/base.html:69
+msgid "Наверх"
+msgstr "Наверх"
+
+#: templates/cars/cars_add.html:6
+msgid "Добавление машины"
+msgstr "Добавление машины"
+
+#: templates/cars/reservation.html:6
+msgid "Аренда автомобиля"
+msgstr "Аренда автомобиля"
+
+#: templates/cars/reservation.html:10
+msgid "Арендовать машину"
+msgstr "Арендовать машину"
+
+#: templates/users/exit.html:5
+msgid "Вы успешно вышли с аккаунта"
+msgstr "Вы успешно вышли с аккаунта"
+
+#: templates/users/exit.html:6
+msgid "Войти в аккаунт снова?"
+msgstr "Войти в аккаунт снова?"
+
+#: templates/users/login.html:6
+msgid "Авторизация на сайте"
+msgstr "Авторизация на сайте"
+
+#: templates/users/login.html:13
+msgid "Забыли пароль?"
+msgstr "Забыли пароль?"
+
+#: templates/users/login.html:13
+msgid "Восстановить пароль!"
+msgstr "Восстановить пароль!"
+
+#: templates/users/pass_reset.html:6
+#: templates/users/password_reset_confirm.html:6
+msgid "Восстановление пароля"
+msgstr "Восстановление пароля"
+
+#: templates/users/pass_reset.html:10
+msgid "Запросить новый пароль"
+msgstr "Запросить новый пароль"
+
+#: templates/users/password_reset_complete.html:5
+#, fuzzy
+#| msgid "Вы успешно сбросили пароль"
+msgid "Вы успешно обновили пароль"
+msgstr "Вы успешно сбросили пароль"
+
+#: templates/users/password_reset_complete.html:6
+msgid "Ваш пароль заменен на новый!"
+msgstr "Ваш пароль заменен на новый!"
+
+#: templates/users/password_reset_confirm.html:10
+msgid "Получить пароль"
+msgstr "Получить пароль"
+
+#: templates/users/password_reset_done.html:5
+msgid "Вы успешно сбросили пароль"
+msgstr "Вы успешно сбросили пароль"
+
+#: templates/users/password_reset_done.html:6
+msgid "Дальнейшие инструкции отправлены Вам на почту"
+msgstr "Дальнейшие инструкции отправлены Вам на почту"
+
+#: templates/users/profile.html:6
+msgid "Кабинет пользователя"
+msgstr "Кабинет пользователя"
+
+#: templates/users/profile.html:22
+msgid "Change"
+msgstr "Изменить"
+
+#: templates/users/profile.html:24
+msgid "Изменение данных"
+msgstr "Изменение данных"
+
+#: templates/users/profile.html:29
+msgid "Изменить"
+msgstr "Изменить"
+
+#: templates/users/profile.html:33
+msgid "Желаетe сменить пароль?"
+msgstr "Желаетe сменить пароль?"
+
+#: templates/users/registration.html:10
+msgid "Зарегистрироваться"
+msgstr "Зарегистрироваться"
+
+#: templates/users/registration.html:13
+msgid "Already have an account?"
+msgstr "У вас уже имеется аккаунт?"
+
+#: templates/users/registration.html:13
+msgid "Sign in"
+msgstr "Войти"
+
+#: users/forms.py:22 users/forms.py:33
+msgid "Email"
+msgstr "Email"
+
+#: users/forms.py:23
+msgid "Password"
+msgstr "Пароль"
+
+#: users/forms.py:24
+msgid "Confirm the password "
+msgstr "Подтвердите пароль"
+
+#: users/forms.py:25 users/forms.py:35
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: users/forms.py:34
+msgid "Name"
+msgstr "Имя"
+
+#: users/forms.py:36
+msgid "Location"
+msgstr "Местонахождение"
+
+#: users/managers.py:16
+msgid "The Email must be set"
+msgstr "Введите еmail"
+
+#: users/managers.py:31
+msgid "Superuser must have is_staff=True."
+msgstr "У суперпользователя должен быть уставлен флаг is_staff=True."
+
+#: users/managers.py:33
+msgid "Superuser must have is_superuser=True."
+msgstr "У суперпользователя должен быть уставлен флаг is_superuser=True."
+
+#: users/models.py:11
+msgid "email address"
+msgstr "email адрес"
+
+#: users/models.py:23
+msgid "First name"
+msgstr "Имя"
+
+#~ msgid "Запросить новый парол"
+#~ msgstr "Запросить новый парол"
+
+#~ msgid "phone number"
+#~ msgstr "Номер телефона"

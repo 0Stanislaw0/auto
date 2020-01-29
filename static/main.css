@@ -1,0 +1,164 @@
+ hr {
+    border: none; /* Убираем границу */
+    background-color: green; /* Цвет линии */
+    color: green; /* Цвет линии для IE6-7 */
+    height: 10px; /* Толщина линии */
+   }
+body{
+  background: #fafafa;
+}
+.alert-light{
+  border-color: #bfbfbf;
+}
+img{
+  max-width: 100%!important;
+}
+.country{
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left:10px;
+}
+.raz {
+  display: table;
+}
+.raz div {
+  padding:3px;
+  display: table-cell;
+  vertical-align: top; /* выравнять по верху */
+}
+.country1{
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left:10px;
+}
+.country2{
+
+}
+.country3{
+  margin-left: auto;
+  text-align:right;
+}
+
+
+iframe{
+  max-width: 100%!important;
+}
+
+.td{
+  border: 5px solid #6DD9E8;
+  white-space: pre-line;
+  color : yellow;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(74,74,74.21);
+  -moz-box-shadow:0 2px 3px 0 rgba(74,74,74.21);
+  box-shadow:0 2px 3px 0 rgba(74,74,74.21);
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.btn
+{
+  margin-top: 10px;
+}
+.user_image
+{
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left:20px;
+}
+.text{
+    color : black;
+}
+.avatar{
+  width: 256px;
+  height: 256px;
+}
+.form-section {
+  color : black;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid silver;
+  box-sizing: border-box;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(74,74,74.21);
+  -moz-box-shadow:0 2px 3px 0 rgba(74,74,74.21);
+  box-shadow:0 2px 3px 0 rgba(74,74,74.21);
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+footer{
+    padding: :30px;
+    background: #333a41;
+    color : white;
+    float: left;
+    width: 100%;
+    margin-top: 50px;
+}
+footer a {color : 788c9e}
+footer a:hover{color #79b0e2}
+
+h3{
+}
+.form-section > h2 {
+  color:#b38a22;
+  margin-bottom:10px;
+}
+.tablestat {
+  display: table;
+  padding: 0px;
+  border-spacing: 5px;
+  border: 1px solid #F9F4CE;
+}
+.rowtab1 {
+  display: table-row;
+}
+.rowtab2 {
+  display: table-row;
+}
+.rowtab3 {
+  display: table-row;
+}
+.rowtab4{
+    display: table-row;
+}
+.cell {
+  display: table-cell;
+  width:15px;
+  text-align:  center;
+  padding: 5px;
+}
+.cell.win {
+  color:green;
+  display: table-cell;
+  width:15px;
+}
+.cell.loss{
+  color:red;
+  display: table-cell;
+  width:15px;
+}
+.cell.losses{
+  display: table-cell;
+  width: 30px;
+  background-color: red;
+  color:white;
+
+}
+.cell.winner{
+  display: table-cell;
+  width: 30px;
+  background-color: green;
+  color:white;
+}
+.draw{
+  color:black;
+  text-align:  center;
+  width:100%;
+}
+.imgfighter{
+
+  margin: 5px;
+}
