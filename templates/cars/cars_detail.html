@@ -5,9 +5,16 @@
 
   <div class="form-section">
     <div class ="text">
+      {% get_current_language as LANGUAGE_CODE %}
+        {% if LANGUAGE_CODE == "ru"%}
+   <div class ="text">
         <p>{% trans "Русское название" %}:<b>  {{object.nameru}}</b></p>
     </div>
+      {%else%}
+       <div class ="text">
       <p> {% trans "Английское название" %}:<b> {{ object.nameen }}</b></p>
+       </div>
+    {%endif%}
       <p>{% trans "Год создания" %}:
           <b>{{object.year_of_creation}}</b></p>
          <p>{% trans "Владелец" %}:
