@@ -4,10 +4,16 @@
 {% block main_section %}
 {% for post in cars %}
   <div class="form-section">
-    <div class ="text">
+    {% get_current_language as LANGUAGE_CODE %}
+        {% if LANGUAGE_CODE == "ru"%}
+   <div class ="text">
         <p>{% trans "Русское название" %}:<b>  {{post.nameru}}</b></p>
     </div>
+      {%else%}
+       <div class ="text">
       <p> {% trans "Английское название" %}:<b> {{ post.nameen }}</b></p>
+       </div>
+    {%endif%}
       <p>{% trans "Год создания" %}:
           <b>{{post.year_of_creation}}</b></p>
     <p>{% trans "Владелец" %}:
