@@ -3,6 +3,7 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils import timezone
 from django.urls import reverse
+from django.utils.translation import get_language
 
 
 class Cars(models.Model):  # Машины, которые будут размещать пользователи
@@ -18,7 +19,11 @@ class Cars(models.Model):  # Машины, которые будут разме�
 
 
     def __str__(self):
-        return '%s: %s, %s' % (self.nameru, self.nameen,self.year_of_creation)
+        lang = get_language()
+        if lang =="ru":
+            return '%s, %s' % (self.nameru, self.year_of_creation)
+        else:
+            return '%s, %s' % (self.nameen, self.year_of_creation)
 
     class Meta:
         verbose_name_plural = 'Автомобили'
