@@ -1,0 +1,23 @@
+{% extends 'cars/base.html' %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block main_section %}
+
+  <div class="form-section">
+        {% get_current_language as LANGUAGE_CODE %}
+        {% if LANGUAGE_CODE == "en"%}
+      <div class ="text">
+        <p>{% trans "Машина" %}:<b> {{object.car.nameen}}({{object.car.year_of_creation}})</b></p>
+      </div>
+      {%else%}
+       <div class ="text">
+        <p>{% trans "Машина" %}:<b> {{object.car.nameru}}({{object.car.year_of_creation}})</b></p>
+       </div>
+    {%endif%}
+     <div class ="text">
+        <p>{% trans "Вы забронивали машину с " %}: <b>{{object.start_time}}</b> {% trans " по " %}: <b>{{object.end_time}}</b>
+
+    </div>
+  </div><br>
+
+{% endblock main_section %}

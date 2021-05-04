@@ -1,0 +1,48 @@
+{% extends 'cars/base.html' %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block main_section %}
+{% for post in cars %}
+  <div class="form-section">
+    {% get_current_language as LANGUAGE_CODE %}
+        {% if LANGUAGE_CODE == "ru"%}
+   <div class ="text">
+        <p>{% trans "Русское название" %}:<b>  {{post.nameru}}</b></p>
+    </div>
+      {%else%}
+       <div class ="text">
+      <p> {% trans "Английское название" %}:<b> {{ post.nameen }}</b></p>
+       </div>
+    {%endif%}
+      <p>{% trans "Год создания" %}:
+          <b>{{post.year_of_creation}}</b></p>
+    <p>{% trans "Владелец" %}:
+          <b>{{post.author}}</b></p>
+        <span class="text-muted">{{post.date|date:"d E Y в H:i:s"}}</span>
+    <a href="{% url 'cars_detail' post.id %}" class ="btn btn-outline-warning">{% trans "Подробнее" %}</a><b>    </b>
+    <a href="{% url 'reservvvv' post.id %}" class ="btn btn-outline-warning">{% trans "Забронировать" %}</a>
+  </div><br>
+{% endfor %}
+
+
+
+{% if is_paginated %}
+  {% if page_obj.has_previous %}
+    <a href="?page=1" class ="btn btn-outline-warning">{% trans "Начало" %}</a>
+    <a href="?page={{ page_obj.previous_page_number }}" class ="btn btn-outline-warning">{% trans "Пред" %} </a>
+  {% endif %}
+
+  {% for num in page_obj.paginator.page_range %}
+    {% if num == page_obj.number %}
+    <button class ="btn btn-warning">{{num}}</button>
+    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3'%}
+    <a href="?page={{num}}" class ="btn btn-outline-warning">{{ num }} </a>
+    {% endif %}
+  {% endfor %}
+
+  {% if page_obj.has_next %}
+    <a href="?page={{page_obj.next_page_number }}" class ="btn btn-outline-warning">{% trans "Cлед" %} </a>
+    <a href="?page={{ page_obj.paginator.num_pages }}" class ="btn btn-outline-warning">{% trans "Посл" %}</a>
+  {% endif %}
+{% endif %}
+{% endblock main_section %}

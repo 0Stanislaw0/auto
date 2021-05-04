@@ -1,0 +1,310 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-05-14 15:34+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: cars/forms.py:29
+msgid "Ending times must after starting times"
+msgstr "Ending times must after starting times"
+
+#: cars/forms.py:36
+msgid "There is an overlap with another reserv: "
+msgstr "There is an overlap with another reserv: "
+
+#: cars/models.py:10 templates/cars/cars_detail.html:10
+#: templates/cars/cars_models.html:10
+msgid "Русское название"
+msgstr "Russian name "
+
+#: cars/models.py:11 templates/cars/cars_detail.html:14
+#: templates/cars/cars_models.html:14
+msgid "Английское название"
+msgstr " English name"
+
+#: cars/models.py:12 templates/cars/cars_detail.html:17
+#: templates/cars/cars_models.html:17 templates/users/profile.html:48
+msgid "Год создания"
+msgstr "Year of creation"
+
+#: cars/models.py:15 templates/cars/cars_detail.html:19
+#: templates/cars/cars_models.html:19
+msgid "Владелец"
+msgstr "Current"
+
+#: cars/models.py:28
+msgid "Автомобили"
+msgstr "Cars"
+
+#: cars/models.py:29
+msgid "Автомобиль"
+msgstr "Car"
+
+#: cars/models.py:34
+msgid "дата аренды"
+msgstr "Date Rent"
+
+#: cars/models.py:35
+msgid "дата возвращения"
+msgstr "Date Back"
+
+#: cars/models.py:36
+msgid "Арендатор"
+msgstr "Renter"
+
+#: cars/models.py:42
+msgid "Аренда машин"
+msgstr "Rent cars"
+
+#: cars/models.py:43
+#, fuzzy
+#| msgid "Аренда машин"
+msgid "Аренда машины"
+msgstr "Rent cars"
+
+#: cars/views.py:120
+msgid "Дальнейшние инструкции отправлены вам на почту!"
+msgstr "Further instructions have been mailed to you"
+
+#: templates/cars/base.html:24
+msgid "Главная"
+msgstr "Main"
+
+#: templates/cars/base.html:28
+msgid "Админка"
+msgstr "Admin"
+
+#: templates/cars/base.html:37 templates/cars/cars_add.html:10
+msgid "Добавить машину"
+msgstr "Аdd car"
+
+#: templates/cars/base.html:38
+msgid "Профиль"
+msgstr "Profile"
+
+#: templates/cars/base.html:39
+msgid "Выйти"
+msgstr "Exit"
+
+#: templates/cars/base.html:41 templates/users/registration.html:8
+msgid "Регистрация"
+msgstr "Registartion"
+
+#: templates/cars/base.html:42 templates/users/login.html:10
+msgid "Войти"
+msgstr "Sign in"
+
+#: templates/cars/cars_add.html:6
+msgid "Добавление машины"
+msgstr "Add car"
+
+#: templates/cars/cars_models.html:22
+msgid "Подробнее"
+msgstr "Detail"
+
+#: templates/cars/cars_models.html:23
+msgid "Забронировать"
+msgstr "Book"
+
+#: templates/cars/cars_models.html:31
+msgid "Начало"
+msgstr "Start"
+
+#: templates/cars/cars_models.html:32
+msgid "Пред"
+msgstr "Previous"
+
+#: templates/cars/cars_models.html:44
+msgid "Cлед"
+msgstr "Next"
+
+#: templates/cars/cars_models.html:45
+msgid "Посл"
+msgstr "Last"
+
+#: templates/cars/reservation.html:9 templates/cars/reservation.html:13
+msgid "Rent car"
+msgstr ""
+
+#: templates/cars/reservation_detail.html:10
+#: templates/cars/reservation_detail.html:14 templates/users/profile.html:41
+#: templates/users/profile.html:45 templates/users/profile.html:60
+msgid "Машина"
+msgstr "Car"
+
+#: templates/cars/reservation_detail.html:18
+msgid "Вы забронивали машину с "
+msgstr "You have booked a car with"
+
+#: templates/cars/reservation_detail.html:18
+msgid " по "
+msgstr " to "
+
+#: templates/users/exit.html:5
+msgid "Вы успешно вышли с аккаунта"
+msgstr "You have successfully logged out"
+
+#: templates/users/exit.html:6
+msgid "Войти в аккаунт снова?"
+msgstr "Sign in again?"
+
+#: templates/users/login.html:6
+msgid "Авторизация на сайте"
+msgstr "Authorization on the site"
+
+#: templates/users/login.html:13
+msgid "Забыли пароль?"
+msgstr "Forgot your password?"
+
+#: templates/users/login.html:13
+msgid "Восстановить пароль!"
+msgstr "Restore password!"
+
+#: templates/users/pass_reset.html:6
+#: templates/users/password_reset_confirm.html:6
+msgid "Восстановление пароля"
+msgstr "Password recovery"
+
+#: templates/users/pass_reset.html:10
+msgid "Запросить новый пароль"
+msgstr "Request a new password"
+
+#: templates/users/password_reset_complete.html:5
+msgid "Вы успешно обновили пароль"
+msgstr "You have successfully updated your password"
+
+#: templates/users/password_reset_complete.html:6
+msgid "Ваш пароль заменен на новый!"
+msgstr "Your password has been replaced with a new one!"
+
+#: templates/users/password_reset_confirm.html:10
+msgid "Получить пароль"
+msgstr "Get password"
+
+#: templates/users/password_reset_done.html:5
+msgid "Вы успешно сбросили пароль"
+msgstr "You have successfully reset your password"
+
+#: templates/users/password_reset_done.html:6
+msgid "Дальнейшие инструкции отправлены Вам на почту"
+msgstr "Further instructions have been mailed to you"
+
+#: templates/users/profile.html:6
+msgid "Кабинет пользователя"
+msgstr "User account"
+
+#: templates/users/profile.html:22
+msgid "Change"
+msgstr "Change"
+
+#: templates/users/profile.html:24
+msgid "Изменение данных"
+msgstr "Data change"
+
+#: templates/users/profile.html:29
+msgid "Изменить"
+msgstr "Сhange"
+
+#: templates/users/profile.html:33
+msgid "Желаетe сменить пароль?"
+msgstr "Would you like to change your password?"
+
+#: templates/users/profile.html:36
+msgid "Мои машины"
+msgstr "My cars"
+
+#: templates/users/profile.html:62
+msgid "Начало аренды"
+msgstr "Date Rent"
+
+#: templates/users/profile.html:63
+msgid "Конец аренды"
+msgstr "End Rent"
+
+#: templates/users/registration.html:13
+msgid "Зарегистрироваться"
+msgstr "Sign up"
+
+#: templates/users/registration.html:16
+msgid "Already have an account?"
+msgstr "Already have an account?"
+
+#: templates/users/registration.html:16
+msgid "Sign in"
+msgstr "Sign in"
+
+#: users/forms.py:23
+msgid "Email"
+msgstr "Email"
+
+#: users/forms.py:24
+msgid "Password"
+msgstr "Password"
+
+#: users/forms.py:25
+msgid "Confirm the password "
+msgstr "Confirm the password"
+
+#: users/forms.py:27
+msgid "Phone number"
+msgstr "phone number"
+
+#: users/managers.py:16
+msgid "The Email must be set"
+msgstr "The Email must be set"
+
+#: users/managers.py:31
+msgid "Superuser must have is_staff=True."
+msgstr "Superuser must have is_staff=True."
+
+#: users/managers.py:33
+msgid "Superuser must have is_superuser=True."
+msgstr "Superuser must have is_superuser=True."
+
+#: users/models.py:11
+msgid "email address"
+msgstr "email address"
+
+#: users/models.py:23
+msgid "First name"
+msgstr "First name"
+
+#: users/models.py:24
+msgid "Location"
+msgstr "location"
+
+#~ msgid "Наверх"
+#~ msgstr "Up"
+
+#, fuzzy
+#~ msgid "Пользователь"
+#~ msgstr "User account"
+
+#~ msgid "Статус"
+#~ msgstr "Status"
+
+#~ msgid "Биографии"
+#~ msgstr "Biography"
+
+#~ msgid "Name"
+#~ msgstr "Name"
+
+#~ msgid "phone number"
+#~ msgstr "phone number"
+
+#~ msgid "location"
+#~ msgstr "location"

@@ -1,0 +1,22 @@
+{% extends 'cars/base.html' %}
+{% load crispy_forms_tags %}
+{% load i18n %}
+{% block main_section %}
+<title> Регистрация </title>
+
+<div class="form-section">
+    <h2>{% trans "Регистрация" %}</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="container">
+            <button type="submit" class="registerbtn"> {% trans "Зарегистрироваться" %}</button>
+        </div>
+        <div class="container signin">
+            <p>{% trans "Already have an account?" %} <a href="{% url 'login' %}">{% trans "Sign in" %}</a>.</p>
+        </div>
+    </form>
+</div>>
+
+
+{% endblock main_section %}
